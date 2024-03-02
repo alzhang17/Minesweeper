@@ -100,7 +100,6 @@ public int countMines(int row, int col)
       if(isValid(row - 1, col + 1) && mines.contains(buttons[row-1][col + 1]))
         numMines++;
     }
-    System.out.println(numMines);
     return numMines;
 }
 public class MSButton
