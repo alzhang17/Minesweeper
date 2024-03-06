@@ -62,6 +62,12 @@ public void displayLosingMessage(){
        buttons[r][c].clicked = true;
    }
  }
+ for(int r = 0; r < NUM_ROWS; r++){
+   for(int c = 0; c < NUM_COLS; c++){   
+     if(buttons[r][c].flagged == true)
+       buttons[r][c].flagged = false;
+   }
+ }
  if(buttons[NUM_ROWS/2][NUM_COLS/2 - 1].clicked == true && buttons[NUM_ROWS/2][NUM_COLS/2].clicked == true){
    buttons[NUM_ROWS/2][NUM_COLS/2].flagged = false;
    buttons[NUM_ROWS/2][NUM_COLS/2 - 1].flagged = false;
